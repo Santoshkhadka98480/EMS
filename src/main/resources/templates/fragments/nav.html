@@ -5,16 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-    <div th:fragment="navbar">
+    <div th:fragment="navbar" >
+        <br>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link " th:href="@{~/}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{~/employee/home}">Employee</a>
+                <a class="nav-link" th:href="@{~/employee}">Employee</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{~/department/home}">Department</a>
+                <a class="nav-link" th:href="@{~/department}">Department</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>

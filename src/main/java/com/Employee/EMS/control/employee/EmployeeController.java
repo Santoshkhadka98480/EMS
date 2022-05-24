@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 public class EmployeeController {
 
-    @RequestMapping(value = "/home",method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String openEmployeeHomePage () {
         return "employee/home";
     }
