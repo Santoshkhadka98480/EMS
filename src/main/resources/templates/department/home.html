@@ -18,19 +18,24 @@
         <hr>
         <form th:action="@{~/department}" th:method="post" th:object="${departmentDto}">
           <div class="form-group">
-
             <input type="text" class="form-control" placeholder="Department Name" th:field="*{name}" required>
           </div>
+          <br>
           <div class="form-group">
             <label ></label>
             <input type="text" class="form-control" placeholder="Department Short Code" th:field="*{shortCode}" required>
           </div>
+          <br>
           <div class="form-group">
             <label >Department Status</label>
             <input type="checkbox" th:value="true" th:field="*{status}">
           </div>
+          <br>
           <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-danger">Reset</button>
+
         </form>
+        <p style="font-style: italic" th:text="${message}"></p>
       </div>
 
       <div class="col-md-8">

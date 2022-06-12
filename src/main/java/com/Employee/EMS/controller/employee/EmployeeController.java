@@ -1,4 +1,4 @@
-package com.Employee.EMS.control.employee;
+package com.Employee.EMS.controller.employee;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,10 +1,8 @@
-package com.Employee.EMS.control.dto;
+package com.Employee.EMS.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@Builder
 @Getter
 @Setter
 @AllArgsConstructor
@@ -14,4 +12,6 @@ public class DepartmentDto {
     private String name;
     private String shortCode;
     private boolean status;
+
+
 }

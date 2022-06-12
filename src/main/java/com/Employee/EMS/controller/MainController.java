@@ -1,10 +1,9 @@
-package com.Employee.EMS.control;
+package com.Employee.EMS.controller;
 
-import com.Employee.EMS.control.dto.SampleDto;
+import com.Employee.EMS.dto.SampleDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.support.HttpRequestHandlerServlet;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;

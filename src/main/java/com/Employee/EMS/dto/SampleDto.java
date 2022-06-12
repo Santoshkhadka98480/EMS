@@ -1,4 +1,4 @@
-package com.Employee.EMS.control.dto;
+package com.Employee.EMS.dto;
 
 import lombok.*;
 
