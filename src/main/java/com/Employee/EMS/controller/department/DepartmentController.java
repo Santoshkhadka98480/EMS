@@ -18,8 +18,9 @@ public class DepartmentController {
 //    @RequestMapping(value = "/home",method = RequestMethod.GET)
     @GetMapping
     public String openDepartmentHomePage (Model model) {
-
+        if (model.getAttribute("departmentDto") == null)
         model.addAttribute("departmentDto",new DepartmentDto());
+        model.addAttribute("departmentDtoList", departmentService.findAll());
 
         System.out.println("This is department page loading");
         return "department/home";
@@ -40,5 +41,22 @@ public class DepartmentController {
 
        return "redirect:/department";
 
+    }
+
+    @GetMapping("/find-by-id/{id}")
+    public String findByID(@PathVariable("id") Integer departmentId, RedirectAttributes redirectAttributes) {
+        DepartmentDto departmentDto =  departmentService.findById(departmentId);
+        if (departmentDto != null)
+        redirectAttributes.addFlashAttribute("departmentDto",departmentDto);
+        return "redirect:/department";
+
+    }
+
+    @GetMapping("delete/{id}")
+    public String deleteDepartment(@PathVariable("id") Integer departmentId, RedirectAttributes redirectAttributes) {
+        String message = "Department deleted successfully";
+        departmentService.deleteDepartmentById(departmentId);
+        redirectAttributes.addFlashAttribute("message",message);
+        return "redirect:/department";
     }
 }
